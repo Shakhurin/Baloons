@@ -216,7 +216,7 @@ body {
   font-size: 2rem;
 }
 
-.row{
+.row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6.7rem;
@@ -228,6 +228,9 @@ body {
 
 .mb10 {
   margin-bottom: 1rem;
+}
+.mb20 {
+  margin-bottom: 2rem;
 }
 
 .mb30 {
@@ -251,7 +254,7 @@ body {
   color: #ba8554;
   padding: 1rem;
   border-bottom: 1px #ba8554 solid;
-  transition: 0.5 all;
+  transition: 0.5s all;
 }
 
 .btn-text:hover {
@@ -265,39 +268,77 @@ body {
   transform: translateY(0);
 }
 
-.composition{
+.composition {
   position: relative;
 }
 
-.composition__photo{
+.composition__photo {
   position: absolute;
   width: 55%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.composition__photo_n1{
+.composition__photo_n1 {
   top: 0;
   left: 0;
 }
 
-.composition__photo_n2{
+.composition__photo_n2 {
   top: 2rem;
   right: 0rem;
 }
 
-.composition__photo_n3{
+.composition__photo_n3 {
   top: 13rem;
   left: 10rem;
 }
 
-.composition__photo:hover{
+.composition__photo:hover {
   z-index: 20;
   scale: 1.1;
 }
 
-.composition:hover .composition__photo:not(:hover){
+.composition:hover .composition__photo:not(:hover) {
   scale: 0.95;
+}
+
+.section-adventure {
+  padding: 21rem 0;
+  background: linear-gradient(
+      90deg,
+      rgba(186, 133, 84, 0.8) 0.03%,
+      rgba(1, 1, 1, 0.8) 100%
+    ),
+    url(../img/adventure-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 8%, 100% 19%, 100% 94%, 0 80%);
+}
+
+.col-1-of-4 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 6rem;
+}
+
+.row-2 {
+  padding: 0 10rem;
+}
+
+.adventure-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem 2.5rem 3rem 2.5rem;
+  border-radius: .5rem;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.adventure-card:hover{
+  transform: translateY(-1rem);
 }
