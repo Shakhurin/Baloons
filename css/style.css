@@ -598,7 +598,6 @@ body {
 }
 
 .section-book {
-  height: 95vh;
   padding: 10rem;
   background: linear-gradient(
     90deg,
@@ -607,95 +606,104 @@ body {
   );
 }
 
-.book{
+.book {
   height: 50rem;
-  background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 57%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.8) 100%), url(../img/form-1.png);
+  background: linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 57%,
+      rgba(186, 133, 80, 0.8) 57%,
+      rgba(161, 79, 3, 0.8) 100%
+    ),
+    url(../img/form-1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
-form{
+form {
   width: 60%;
   padding-top: 5rem;
   padding-left: 5rem;
 }
-.form__group:not(:last-child){
-  margin-bottom: 2rem
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
 }
-.form__group:nth-child(4){
-  margin-bottom: 4rem
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
 }
-        
-.form__input{
+
+.form__input {
   font-size: 1.6rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-weight: 400;
   color: black;
   padding: 2rem 0rem 2rem 2rem;
   background: white;
   border: none;
-  border-bottom: .3rem solid transparent;
-  border-radius: .5rem;
+  border-bottom: 0.3rem solid transparent;
+  border-radius: 0.5rem;
   width: 75%;
 }
-        
-.form__input:focus{
+
+.form__input:focus {
   outline: none;
-  border-bottom: .3rem solid #66D763;
+  border-bottom: 0.3rem solid #66d763;
   box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-.form__input:focus:invalid{
-  border-bottom: .3rem solid #D76363;
+.form__input:focus:invalid {
+  border-bottom: 0.3rem solid #d76363;
 }
 
-.form__label{
+.form__label {
   font-size: 1.6rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-weight: 400;
   display: block;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  transition: .2s all;
-}      
-        
-.form__input:placeholder-shown .form__label{
+  transition: 0.2s all;
+}
+
+.form__input:placeholder-shown .form__label {
   opacity: 0;
   visibility: none;
   transform: translateY(-3rem);
 }
 
-.form__group_radio{
+.form__group_radio {
   width: 40%;
   display: inline-block;
 }
 
-.form__input-radio{
+.form__input-radio {
   display: none;
 }
 
-.form__label-radio{
+.form__label-radio {
   cursor: pointer;
   position: relative;
   padding-left: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
-.form__button-radio{
+.form__button-radio {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  border: .5rem solid rgba(186, 133, 84, 0.8) 0.03%;
+  border: 0.5rem solid rgba(161, 79, 3, 1);
   display: block;
   position: absolute;
   left: 0;
-  top: -0.4rem;
+  top: -0.8rem;
 }
 
-.form__button-radio::after{
-  content: "";
+.form__button-radio::after {
+  content: '';
   display: block;
   height: 1.5rem;
   width: 1.5rem;
@@ -706,10 +714,65 @@ form{
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: .2s all;
+  transition: 0.2s all;
 }
 
-.form__input-radio:checked ~ .form__label-radio .form__button-radio::after{
-  opacity: 1
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
-        
+
+.btn_brown {
+  background: rgba(161, 79, 3, 1) 100%;
+  color: #fff;
+  border: none;
+}
+
+.btn_brown:hover {
+  background: rgba(161, 79, 3, 1) 100%;
+}
+
+.btn_brown::after {
+  background: rgba(161, 79, 3, 1) 100%;
+}
+
+.footer {
+  padding: 8rem;
+  background: #333333;
+}
+
+.footer__logo{
+  height: 12rem;
+  width: 12rem;
+}
+
+.footer__list{
+  list-style: none;
+  text-align: center;
+}
+
+.footer__item{
+  display: inline-block;
+  
+}
+
+.footer__item:not(:last-child){
+  margin-right: 5rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 300;
+  display: inline-block;
+  transition: .3s;
+}
+
+.footer__link:visited{
+  color: #ffffff;
+}
+
+.footer__link:hover{
+  transform: rotate(5deg) scale(1.2);
+  color: rgba(161, 79, 3, 1);
+  text-shadow: 0rem 0.2rem  rgba(0, 0, 0, 0.3);
+}
